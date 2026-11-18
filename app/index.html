@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#28160b">
+<meta name="description" content="Cozy pixel-art tasting ledger: a cheese cellar log with photos and AI appraisal, plus structured tasting rounds.">
+<title>Tasting Ledger</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pixelify+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app">
+  <header class="hero" id="hero">
+    <div class="scene-frame"><canvas id="scene" width="200" height="72" role="img" aria-label="Pixel alpine dairy hut at dusk with cheese wheels by the door and a small pumpkin patch"></canvas></div>
+    <div class="sign"><h1>Tasting Ledger</h1><p id="sign-sub">THE CHEESE CELLAR</p></div>
+  </header>
+  <main id="view" class="stack"><section class="panel"><p class="lead">Opening the cellar…</p></section></main>
+</div>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-in">
+    <button class="tab" type="button" data-tab="cellar" data-go="#cellar">
+      <svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="1" y="9" width="14" height="5" fill="#b07a3a"/><rect x="1" y="6" width="14" height="3" fill="#f2c14e"/><rect x="1" y="5" width="14" height="1" fill="#fbe08f"/><rect x="4" y="7" width="2" height="1" fill="#b9841c"/><rect x="10" y="7" width="2" height="1" fill="#b9841c"/><rect x="0" y="14" width="16" height="2" fill="#28160b"/></svg>
+      <span>Cellar</span></button>
+    <button class="tab" type="button" data-tab="rounds" data-go="#rounds">
+      <svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="7" y="1" width="2" height="3" fill="#5f7e2b"/><rect x="3" y="4" width="10" height="1" fill="#e8761d"/><rect x="2" y="5" width="12" height="8" fill="#e8761d"/><rect x="3" y="13" width="10" height="1" fill="#e8761d"/><rect x="7" y="4" width="1" height="10" fill="#a54a0c"/><rect x="10" y="5" width="1" height="8" fill="#a54a0c"/><rect x="4" y="6" width="2" height="3" fill="#f7a95b"/></svg>
+      <span>Rounds</span></button>
+    <button class="add" type="button" data-go="#add" aria-label="Add a cheese">
+      <svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="7" y="2" width="2" height="12" fill="currentColor"/><rect x="2" y="7" width="12" height="2" fill="currentColor"/></svg>
+    </button>
+    <button class="tab" type="button" data-tab="ledger" data-go="#ledger">
+      <svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="2" y="1" width="12" height="14" fill="#f9e7bd"/><rect x="2" y="1" width="2" height="14" fill="#a3632e"/><rect x="6" y="4" width="6" height="1" fill="#75502f"/><rect x="6" y="7" width="6" height="1" fill="#75502f"/><rect x="6" y="10" width="4" height="1" fill="#75502f"/></svg>
+      <span>Ledger</span></button>
+    <button class="tab" type="button" data-tab="desk" data-go="#desk">
+      <svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges"><rect x="3" y="3" width="10" height="11" fill="#5b3217"/><rect x="4" y="4" width="8" height="9" fill="#a3632e"/><rect x="3" y="2" width="2" height="1" fill="#5b3217"/><rect x="11" y="2" width="2" height="1" fill="#5b3217"/><rect x="4" y="5" width="3" height="3" fill="#fcefcf"/><rect x="9" y="5" width="3" height="3" fill="#fcefcf"/><rect x="5" y="6" width="1" height="1" fill="#28160b"/><rect x="10" y="6" width="1" height="1" fill="#28160b"/><rect x="7" y="8" width="2" height="1" fill="#e0ac1c"/></svg>
+      <span>Desk</span></button>
+  </div>
+</nav>
+<div class="toast" id="toast" role="status" hidden></div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+*.zip
+prototype/
+appraisals/
+appraisal-request-*.json
+appraisal-result-*.json
+tasting-ledger-backup-*.json
+node_modules
+.DS_Store
